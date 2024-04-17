@@ -1,11 +1,8 @@
-﻿// Traffic Simulation
-// https://github.com/mchrbn/unity-traffic-simulation
-
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TrafficSimulation {
     public class Waypoint : MonoBehaviour {
-        [HideInInspector] public Segment segment;
+        public Segment segment;
 
         public void Refresh(int _newId, Segment _newSegment) {
             segment = _newSegment;
