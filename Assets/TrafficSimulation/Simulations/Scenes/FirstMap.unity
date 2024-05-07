@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightGroupId: 2
-  intersection: {fileID: 0}
+  intersection: {fileID: 1160756276}
 --- !u!23 &90004734
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -745,7 +745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightGroupId: 1
-  intersection: {fileID: 0}
+  intersection: {fileID: 1858365625}
 --- !u!23 &135188007
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1289,7 +1289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightGroupId: 2
-  intersection: {fileID: 0}
+  intersection: {fileID: 673151695}
 --- !u!23 &188019550
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1669,7 +1669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightGroupId: 2
-  intersection: {fileID: 0}
+  intersection: {fileID: 1858365625}
 --- !u!23 &223139765
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2704,7 +2704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightGroupId: 2
-  intersection: {fileID: 0}
+  intersection: {fileID: 673151695}
 --- !u!23 &335711531
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6898,7 +6898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightGroupId: 1
-  intersection: {fileID: 0}
+  intersection: {fileID: 673151695}
 --- !u!23 &803125597
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7000,7 +7000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightGroupId: 1
-  intersection: {fileID: 0}
+  intersection: {fileID: 1858365625}
 --- !u!23 &812022416
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8101,7 +8101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightGroupId: 1
-  intersection: {fileID: 0}
+  intersection: {fileID: 1160756276}
 --- !u!23 &904871330
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8895,7 +8895,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965141691}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.9999106, z: -0, w: -0.013373513}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: 1, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8904,7 +8904,7 @@ Transform:
   - {fileID: 1026477187}
   - {fileID: 388613069}
   m_Father: {fileID: 463888825}
-  m_LocalEulerAnglesHint: {x: 0, y: -181.53299, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &965141693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9363,7 +9363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightGroupId: 2
-  intersection: {fileID: 0}
+  intersection: {fileID: 1160756276}
 --- !u!23 &999314552
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11369,7 +11369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightGroupId: 1
-  intersection: {fileID: 0}
+  intersection: {fileID: 1160756276}
 --- !u!23 &1197557020
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13583,7 +13583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightGroupId: 2
-  intersection: {fileID: 0}
+  intersection: {fileID: 1858365625}
 --- !u!23 &1433610234
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19179,7 +19179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightGroupId: 1
-  intersection: {fileID: 0}
+  intersection: {fileID: 673151695}
 --- !u!23 &2083313242
 MeshRenderer:
   m_ObjectHideFlags: 0

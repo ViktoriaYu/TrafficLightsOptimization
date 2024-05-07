@@ -4009,7 +4009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde2d72bdb21e8542bfb0a4516cc158b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trafficSystem: {fileID: 0}
+  trafficSystem: {fileID: 1767926898}
   waypointThresh: 2.5
   raycastAnchor: {fileID: 331396408}
   raycastLength: 3
@@ -7589,7 +7589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde2d72bdb21e8542bfb0a4516cc158b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trafficSystem: {fileID: 0}
+  trafficSystem: {fileID: 1767926898}
   waypointThresh: 2.5
   raycastAnchor: {fileID: 281509035}
   raycastLength: 3
@@ -7908,7 +7908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde2d72bdb21e8542bfb0a4516cc158b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trafficSystem: {fileID: 0}
+  trafficSystem: {fileID: 1767926898}
   waypointThresh: 2.5
   raycastAnchor: {fileID: 273385532}
   raycastLength: 3
@@ -10129,7 +10129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde2d72bdb21e8542bfb0a4516cc158b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trafficSystem: {fileID: 0}
+  trafficSystem: {fileID: 1767926898}
   waypointThresh: 2.5
   raycastAnchor: {fileID: 596067352}
   raycastLength: 3
@@ -10665,7 +10665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde2d72bdb21e8542bfb0a4516cc158b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trafficSystem: {fileID: 0}
+  trafficSystem: {fileID: 1767926898}
   waypointThresh: 2.5
   raycastAnchor: {fileID: 615284663}
   raycastLength: 3
@@ -11527,7 +11527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde2d72bdb21e8542bfb0a4516cc158b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trafficSystem: {fileID: 0}
+  trafficSystem: {fileID: 1767926898}
   waypointThresh: 2.5
   raycastAnchor: {fileID: 1002186699}
   raycastLength: 3
@@ -13191,7 +13191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde2d72bdb21e8542bfb0a4516cc158b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trafficSystem: {fileID: 0}
+  trafficSystem: {fileID: 1767926898}
   waypointThresh: 2.5
   raycastAnchor: {fileID: 2041258260}
   raycastLength: 3
@@ -13533,7 +13533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 36a2e895ccfc74f4aad14aca045e8cd4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.659
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 36a2e895ccfc74f4aad14aca045e8cd4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15570,7 +15570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde2d72bdb21e8542bfb0a4516cc158b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trafficSystem: {fileID: 0}
+  trafficSystem: {fileID: 1767926898}
   waypointThresh: 2.5
   raycastAnchor: {fileID: 1720205749}
   raycastLength: 3
@@ -15702,7 +15702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde2d72bdb21e8542bfb0a4516cc158b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trafficSystem: {fileID: 0}
+  trafficSystem: {fileID: 1767926898}
   waypointThresh: 2.5
   raycastAnchor: {fileID: 1973836240}
   raycastLength: 3
@@ -16047,7 +16047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde2d72bdb21e8542bfb0a4516cc158b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trafficSystem: {fileID: 0}
+  trafficSystem: {fileID: 1767926898}
   waypointThresh: 2.5
   raycastAnchor: {fileID: 1094736231}
   raycastLength: 3
@@ -17057,7 +17057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde2d72bdb21e8542bfb0a4516cc158b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trafficSystem: {fileID: 0}
+  trafficSystem: {fileID: 1767926898}
   waypointThresh: 2.5
   raycastAnchor: {fileID: 1768612110}
   raycastLength: 3
@@ -19704,7 +19704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde2d72bdb21e8542bfb0a4516cc158b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trafficSystem: {fileID: 0}
+  trafficSystem: {fileID: 1767926898}
   waypointThresh: 2.5
   raycastAnchor: {fileID: 1755129663}
   raycastLength: 3
