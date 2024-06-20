@@ -19,7 +19,7 @@ namespace TrafficSimulation {
             foreach (Segment segment in script.segments) {
                 //Draw segment names
                 GUIStyle style = new GUIStyle {normal = {textColor = new Color(1, 0, 0)}, fontSize = 15};
-                Handles.Label(segment.transform.position, segment.name, style);
+                //Handles.Label(segment.transform.position, ""+segment.id, style);
 
                 //Draw waypoint
                 for (int j = 0; j < segment.waypoints.Count; j++) {

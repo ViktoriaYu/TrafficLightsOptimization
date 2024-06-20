@@ -1,13 +1,12 @@
-// Traffic Simulation
-// https://github.com/mchrbn/unity-traffic-simulation
-
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace TrafficSimulation{
     public enum IntersectionType{
-        STOP,
-        TRAFFIC_LIGHT
+        //STOP,
+        FIX_TRAFFIC_LIGHT,
+        GREEN_WAVE_TRAFFIC_LIGHT,
+        ADAPT_TRAFFIC_LIGHT
     }
 
     public class Intersection : MonoBehaviour
@@ -16,13 +15,20 @@ namespace TrafficSimulation{
         public int id;  
 
         //For stop only
-        public List<Segment> prioritySegments;
+        //public List<Segment> prioritySegments;
 
         //For traffic lights only
         public float lightsDuration = 8;
         public float orangeLightDuration = 2;
         public List<Segment> lightsNbr1;
         public List<Segment> lightsNbr2;
+
+        //For green wave traffic lights only
+        public List<Intersection> nextIntersections;
+        public bool isFirst;
+        private bool isNext;
+        private float timeToNextIntersection;
+        public float gwTimeBtwIntersections = 2.5f;
 
         private List<GameObject> vehiclesQueue;
         private List<GameObject> vehiclesInIntersection;
@@ -33,8 +39,45 @@ namespace TrafficSimulation{
         void Start(){
             vehiclesQueue = new List<GameObject>();
             vehiclesInIntersection = new List<GameObject>();
-            if(intersectionType == IntersectionType.TRAFFIC_LIGHT)
+            if(intersectionType == IntersectionType.FIX_TRAFFIC_LIGHT)
                 InvokeRepeating("SwitchLights", lightsDuration, lightsDuration);
+            
+            else if (intersectionType == IntersectionType.GREEN_WAVE_TRAFFIC_LIGHT)
+            {
+                if (isFirst)
+                {
+                    InvokeRepeating("SwitchLights", lightsDuration, lightsDuration);
+                    foreach (Intersection intersection in nextIntersections)
+                    {
+                        intersection.isNext = true;
+                        intersection.timeToNextIntersection = gwTimeBtwIntersections;
+                    }
+                }
+            }
+        }
+
+        void Update()
+        {
+            if (intersectionType == IntersectionType.GREEN_WAVE_TRAFFIC_LIGHT)
+            {
+                if (isNext)
+                {
+                    if (timeToNextIntersection <= 0)
+                    {
+                        InvokeRepeating("SwitchLights", lightsDuration, lightsDuration);
+                        foreach (Intersection intersection in nextIntersections)
+                        {
+                            intersection.isNext = true;
+                            intersection.timeToNextIntersection = gwTimeBtwIntersections;
+                        }
+                        isNext = false;
+                    }
+                    else
+                    {
+                        timeToNextIntersection -= Time.deltaTime;
+                    }
+                }
+            }
         }
 
         void SwitchLights(){
@@ -51,19 +94,20 @@ namespace TrafficSimulation{
             //Also abort if we just started the scene (if vehicles inside colliders at start)
             if(IsAlreadyInIntersection(_other.gameObject) || Time.timeSinceLevelLoad < .5f) return;
 
-            if(_other.tag == "AutonomousVehicle" && intersectionType == IntersectionType.STOP)
-                TriggerStop(_other.gameObject);
-            else if(_other.tag == "AutonomousVehicle" && intersectionType == IntersectionType.TRAFFIC_LIGHT)
+            
+            if(_other.tag == "AutonomousVehicle" && intersectionType == IntersectionType.FIX_TRAFFIC_LIGHT)
                 TriggerLight(_other.gameObject);
+            //else if (_other.tag == "AutonomousVehicle" && intersectionType == IntersectionType.STOP)
+            //    TriggerStop(_other.gameObject);
         }
 
         void OnTriggerExit(Collider _other) {
-            if(_other.tag == "AutonomousVehicle" && intersectionType == IntersectionType.STOP)
-                ExitStop(_other.gameObject);
-            else if(_other.tag == "AutonomousVehicle" && intersectionType == IntersectionType.TRAFFIC_LIGHT)
+            if (_other.tag == "AutonomousVehicle" && intersectionType == IntersectionType.FIX_TRAFFIC_LIGHT)
                 ExitLight(_other.gameObject);
+            //else if (_other.tag == "AutonomousVehicle" && intersectionType == IntersectionType.STOP)
+            //    ExitStop(_other.gameObject); 
         }
-
+        /*
         void TriggerStop(GameObject _vehicle){
             VehicleAI vehicleAI = _vehicle.GetComponent<VehicleAI>();
             
@@ -95,7 +139,7 @@ namespace TrafficSimulation{
             if(vehiclesQueue.Count > 0 && vehiclesInIntersection.Count == 0){
                 vehiclesQueue[0].GetComponent<VehicleAI>().vehicleStatus = Status.GO;
             }
-        }
+        } */
 
         void TriggerLight(GameObject _vehicle){
             VehicleAI vehicleAI = _vehicle.GetComponent<VehicleAI>();
@@ -142,14 +186,14 @@ namespace TrafficSimulation{
             }
             vehiclesQueue = nVehiclesQueue;
         }
-
+        /*
         bool IsPrioritySegment(int _vehicleSegment){
             foreach(Segment s in prioritySegments){
                 if(_vehicleSegment == s.id)
                     return true;
             }
             return false;
-        }
+        } */
 
         bool IsAlreadyInIntersection(GameObject _target){
             foreach(GameObject vehicle in vehiclesInIntersection){

@@ -19,7 +19,8 @@ namespace TrafficSimulation {
         
         public List<Segment> segments = new List<Segment>();
         public List<Intersection> intersections = new List<Intersection>();
-        public Segment curSegment = null;  
+        public Segment curSegment = null;
+
         
         public List<Waypoint> GetAllWaypoints() {
             List<Waypoint> points = new List<Waypoint>();

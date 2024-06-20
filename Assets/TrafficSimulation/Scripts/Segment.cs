@@ -10,6 +10,7 @@ namespace TrafficSimulation {
         
         public int id;
         public List<Waypoint> waypoints;
+        public bool isEnd;
 
         public bool IsOnSegment(Vector3 _p){
             TrafficSystem ts = GetComponentInParent<TrafficSystem>();
@@ -25,5 +26,14 @@ namespace TrafficSimulation {
             }
             return false;
         }
+        
+        public void OnColliderEnter(Collision other)
+        {
+            if ((isEnd) && (other.gameObject.CompareTag("AutonomousVehicle")))
+            {
+                Destroy(other.gameObject);
+            }
+        }
+        
     }
 }

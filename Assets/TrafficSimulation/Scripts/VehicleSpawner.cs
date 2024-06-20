@@ -2,6 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/*
+public class VehicleSpawner : MonoBehaviour
+{
+    public GameObject[] vehicle;
+    public Transform[] spawnPoints;
+
+    private int rand;
+    private int randPosition;
+    public float startTimeBtwSpawns;
+    private float timeBtwSpawns;
+
+
+    void Start()
+    {
+        timeBtwSpawns = startTimeBtwSpawns;
+    }
+
+    void Update()
+    {
+        if (timeBtwSpawns <= 0)
+        {
+            rand = Random.Range(0, vehicle.Length);
+            randPosition = Random.Range(0, spawnPoints.Length);
+            Instantiate(vehicle[rand], spawnPoints[randPosition].transform.position, Quaternion.identity);
+            timeBtwSpawns = startTimeBtwSpawns;
+        }   
+        else
+        {
+            timeBtwSpawns -= Time.deltaTime;
+        }
+    }
+}
+*/
+
+
 public class VehicleSpawner : MonoBehaviour
 {
     public GameObject[] vehicles;

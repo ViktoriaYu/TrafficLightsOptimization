@@ -66,9 +66,10 @@ namespace TrafficSimulation {
         void Start()
         {
             wheelDrive = this.GetComponent<WheelDrive>();
+            //trafficSystem = this.GetComponent<TrafficSystem>();
 
             if(trafficSystem == null)
-                return;
+                trafficSystem = this.GetComponent<TrafficSystem>();
 
             initMaxSpeed = wheelDrive.maxSpeed;
             SetWaypointVehicleIsOn();
@@ -76,7 +77,7 @@ namespace TrafficSimulation {
 
         void Update(){
             if(trafficSystem == null)
-                return;
+                trafficSystem = this.GetComponent<TrafficSystem>();
 
             WaypointChecker();
             MoveVehicle();
